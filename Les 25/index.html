@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <title>Gebruikersinformatie</title>
+</head>
+<body>
+  <h1>Vul hier uw informatie in</h1>
+  <div class="container"></div>
+  <form>
+    <ul class="flex-outer">
+      <li>
+        <label for="naam">Naam:</label>
+        <input type="text" id="naam" placeholder="Uw naam">
+      </li>
+      <li>
+        <label for="favoriete boek">Favoriete boek:</label>
+        <input type="text" id="favorieteBoek" placeholder="Uw favoriete boek">
+      </li>
+      <li>
+        <label for="favoriete film">Favoriete film:</label>
+        <input type="text" id="favorieteFilm" placeholder="Uw favoriete film">
+      </li>
+      <li>
+        <button type="button" id="toonInformatieButton">Verzenden</button>
+      </li>
+    </ul>
+  </form>
+
+  <script>
+    document.getElementById("toonInformatieButton").addEventListener("click", function() {
+        const naam = document.getElementById("naam").value;
+        const favorieteBoek = document.getElementById("favorieteBoek").value;
+        const favorieteFilm = document.getElementById("favorieteFilm").value;
+
+        const informatie = `Naam: ${naam}\nFavoriete Boek: ${favorieteBoek}\nFavoriete Film: ${favorieteFilm}`;
+
+        alert(informatie);
+    });
+</script>
+</body>
+</html>
